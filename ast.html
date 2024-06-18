@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script type="text/javascript">
+    //create empty apntag object if it doesn't exist
+    var apntag = apntag || {};
+    //create a queue on the apntag object
+    apntag.anq = apntag.anq || [];
+
+        //load ast.js - async
+    (function() {
+       var d = document, e = d.createElement('script'), p = d.getElementsByTagName('head')[0];
+       e.type = 'text/javascript';  e.async = true;
+       e.src = 'acdn.adnxs.com/ast/ast.js';
+       p.insertBefore(e, p.firstChild);
+    })();
+
+    //push commands to loading queue, to allow for async loading
+    apntag.anq.push(function() {
+        //set global page options
+        apntag.setPageOpts({
+            member: 9178,
+            keywords: {
+
+            }
+        })});
+    //define ad tags
+    apntag.defineTag({
+        invCode: 'Blick.ch_DE_MobileAppAndroid_ROS_MMR_1',
+        sizes: [300,250]
+    });
+
+    //start loading tags
+    apntag.loadTags();
+    </script>
+</head>
+
